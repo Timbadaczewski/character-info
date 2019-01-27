@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Filter extends Component {
   render() {
     return (
-      <div id="filter" className="col-3">
+      <div id="filter">
         <nav>
           <h3>Filter Options</h3>
           <ul>
