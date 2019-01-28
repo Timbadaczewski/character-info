@@ -76,18 +76,11 @@ class Characters extends Component {
     this.removeCharacterHandler = this.removeCharacterHandler.bind(this);
   }
 
-  removeCharacterHandler(e) {
-    const name = e.target.name;
-    let oldCharList = [...this.state.characters];
-    oldCharList.map((char, index) => {
-      if (char.name === name) {
-        console.log(name);
-      }
-    });
-    // console.log(updatedCharList);
-    // return updatedCharList;
-    // this.setState({ characters: updatedCharList });
-    console.log(name);
+  removeCharacterHandler(index) {
+    // const name = e.target.name;
+    const CharList = [...this.state.characters];
+    CharList.splice(index, 1);
+    this.setState({ characters: CharList });
   }
 
   render() {
@@ -101,13 +94,13 @@ class Characters extends Component {
           </div>
 
           <div id="character-grid" className="col-11">
-            {this.state.characters.map(char => {
+            {this.state.characters.map((char, index) => {
               return (
                 <Character
                   name={char.name}
                   health={char.health}
                   level={char.level}
-                  removeCharacter={this.removeCharacterHandler}
+                  removeCharacter={() => this.removeCharacterHandler(index)}
                   key={char.id}
                 />
               );
