@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import Home from "./components/Home";
-import Characters from "./components/Characters/Characters";
+import Characters from "./containers/Characters";
 import Races from "./components/Races";
 import Navbar from "./components/Navbar";
 

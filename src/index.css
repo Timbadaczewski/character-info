@@ -71,11 +71,12 @@ nav button {
 
 #character-grid {
   color: #00aeff;
+  box-shadow: 5px 10px #00aeff;
 }
 
 .character {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   display: inline-block;
   padding: 10px 10px;
 }
